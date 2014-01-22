@@ -27,7 +27,7 @@
         (li "i18n and l10n - Tower")
         (li "Asset pipeline - Optimus or Stefon")
         (li (strong "Luminus")
-            (text " wraps many of these up in a set ofLeiningen tasks.")))
+            (text " wraps many of these up in a set of Leiningen tasks.")))
       (notes "Clojure just has a different approach: libraries that work well "
              "together and that you can mix and match. Does this make getting "
              "started harder? Yes, because you have to pick your tools. But "
