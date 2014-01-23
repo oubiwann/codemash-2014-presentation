@@ -1,8 +1,5 @@
 (page "example-deck.html"
-      (:require [hoplon.reveal :refer
-                  [slideshow deck chapter slide bullet notes highlight
-                   quicklist]]
-                [hoplon.util :as util]
+      (:require [hoplon.reveal :refer [slideshow]]
                 [example-deck.chapter1 :as ch1]
                 [example-deck.chapter2 :as ch2]
                 [example-deck.chapter3 :as ch3]
