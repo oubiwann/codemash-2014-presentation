@@ -50,10 +50,7 @@ slide deck defined in a file called ``example_deck.cljs.hl`` (but compiled to
 ``example-deck.html``):
 ```clojure
 (page "example-deck.html"
-      (:require [hoplon.reveal :refer
-                  [slideshow deck chapter slide bullet notes highlight
-                   quicklist]]
-                [hoplon.util :as util]
+      (:require [hoplon.reveal :refer [slideshow]]
                 [example-deck.chapter1 :as ch1]
                 [example-deck.chapter2 :as ch2]
                 [example-deck.chapter3 :as ch3]
@@ -61,7 +58,6 @@ slide deck defined in a file called ``example_deck.cljs.hl`` (but compiled to
                 [example-deck.chapter5 :as ch5]
                 [example-deck.chapter6 :as ch6]
                 [example-deck.chapter7 :as ch7]))
-
 
 (html
   (head)
