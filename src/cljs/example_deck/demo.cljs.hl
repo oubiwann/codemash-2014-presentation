@@ -1,7 +1,0 @@
-(ns example-deck.demo
-    (:require [hoplon.reveal :refer [chapter slide notes bullet]]
-              [example-deck.sample-code :as sample-code]))
-
-
-(defn slides []
-  (chapter :title "Demo!"))

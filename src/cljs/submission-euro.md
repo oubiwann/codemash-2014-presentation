@@ -6,7 +6,9 @@ In 1995, Fergal co-founded Adnet, Ireland's oldest web develpment company, and o
 
 Fergal is always in search of new technologies which change what he and his customers can achieve. He adopted Linux in 1992, Apache in 1994 (then NCSA httpd), PHP in 1995 (then PHP/FI), MySQL in 1995 (then mSQL), Ruby in 2002 etc.
 
-Fergal has been following Jeff Hawkins' work for several years. In 2013 Numenta open sourced NuPIC, their platform for intelligent computing. Fergal has been a significant contributor to the community of theorists, researchers and deveopers which has grown up around NuPIC in the past year. In December 2013, Fergal was contracted to conduct R&D on combining the CEPT Cortical Engine for Processing Text with the NuPIC system. The result of this was the decision to build Clortex.
+Fergal has been following Jeff Hawkins' work for several years. In 2013 Numenta open sourced NuPIC, their platform for intelligent computing. Fergal has been a significant contributor to the community of theorists, researchers and deveopers which has grown up around NuPIC in the past year.
+
+In December 2013, Fergal was contracted to conduct R&D on combining the CEPT Cortical Engine for Processing Text with the NuPIC system. The result of this was the decision to build Clortex.
 
 ## Title: Real Machine Intelligence with Clortex
 

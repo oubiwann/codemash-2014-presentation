@@ -1,13 +1,13 @@
 (page "clortex-presentation.html"
       (:require [hoplon.reveal :refer [slideshow]]
-                [example-deck.chapter1 :as ch1]
-                [example-deck.demo :as demo]
-                [example-deck.chapter2 :as ch2]
-                [example-deck.chapter3 :as ch3]
-                [example-deck.chapter4 :as ch4]
-                [example-deck.chapter5 :as ch5]
-                [example-deck.chapter6 :as ch6]
-                [example-deck.chapter7 :as ch7]))
+                [lambdajam.chapter1 :as ch1]
+                [lambdajam.demo :as demo]
+                [lambdajam.chapter2 :as ch2]
+                [lambdajam.chapter3 :as ch3]
+                [lambdajam.chapter4 :as ch4]
+                [lambdajam.chapter5 :as ch5]
+                [lambdajam.chapter6 :as ch6]
+                [lambdajam.chapter7 :as ch7]))
 
 
 (html

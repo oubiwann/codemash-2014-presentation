@@ -1,0 +1,67 @@
+(ns euroclojure.chapter3
+  (:require [hoplon.reveal :refer [chapter slide notes bullet quicklist fragment-list annotation]]
+            [euroclojure.sample-code :as sample-code]))
+
+
+(defn slides []
+  (chapter :title "Theory: Hierarchical Temporal Memory"
+           (slide :title "Six Key Principles"
+                  (fragment-list
+                   "On-line Learning from Streaming Data"
+                   "Hierarchy of Memory Regions"
+                   "Sequence Memory"
+                   "Sparse Distributed Representations"
+                   "All Regions are both Sensory and Motor"
+                   "Attention")
+                  (notes ""))
+           (slide :title "On-line Learning from Streaming Data"
+                  (fragment-list
+                   "Up to 10 million senses feed the brain"
+                   "We don't (can't) store this data"
+                   "We build models from live data"
+                   "Models are updated with new data"))
+           (slide :title "Hierarchy of Memory Regions"
+                  (fragment-list
+                   "Sensory data enters at the bottom"
+                   "Models are built in every region"
+                   "Things change more slowly as you go up"
+                   "Hierarchy enables sequences of sequences"
+                   "The hierarchy works upwards and downwards"))
+           (slide :title "Sequence Memory"
+                  (fragment-list
+                   "All sensory data involves time"
+                   "Sequence memory allows predictions"
+                   "Structure in data is elaborated over time"
+                   "Sequences can be composed in hierarchy"))
+           (slide :title "Sparse Distributed Representations"
+                  (fragment-list
+                   "In each region, many neurons, few are active"
+                   "SDRs represent spatial patterns"
+                   "SDRs have many useful properties:"
+                   "Fault-tolerant, semantic operations, high-capacity"
+                   "Key to understanding and building intelligent systems"))
+           (slide :title "All Regions are both Sensory and Motor"
+                  (fragment-list
+                   "Every region processes sensory data and produces behaviour"
+                   "Behaviour provides context for sensory data"
+                   "Structure in the model is navigated via behaviour"
+                   "The neocortex learns to control the old brain"
+                   "A sequence memory is a sensorimotor model of the world"))
+           (slide :title "Attention"
+                  (fragment-list
+                   "We use attention to manage the neocortex"
+                   "Attention allows for planning and previsualisation"
+                   "Novel data or anomalies can 'demand attention'"
+                   "Whole sub-hierarchies can be switched on or off"))
+           (slide :title "The Neocortex - Layers"
+                  (p :class "fragment" :fragment-index 1 :align "right"
+                     "Drawing by Ramon y Cahal, 1911")
+                  (img :src "img/image754-cortical-layers.png")
+                  (notes " "))
+           (slide :title "The Neocortex - Neurons"
+                  (img :src "img/model-neuron.jpg")
+                  (notes " "))
+
+           ;image754-cortical-layers
+
+))
