@@ -1,23 +1,29 @@
 (ns euroclojure.chapter6
-    (:require [hoplon.reveal :refer [chapter slide]]
+  (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]
               [hoplon.util :as util]))
 
 
 (defn slides []
-  (chapter :title "Putting it all together"
+  (chapter :title "Summing Up"
     (slide :title "Review"
-      (ul
-        (li "Clojure is a great language for web development")
-        (li "Look at Luminus for a good prepackaged collection of libraries")
-        (li "Hoplon makes dynamic front-ends easy")
-        (li "Liberator handles all the scutwork of making REST APIs")
-        (li "HTTP Kit is a speedy Clojure web server that handles streaming, "
-            "polling, and WebSockets with ease")))
+      (fragment-list
+        "Big Data is not just a Machine Intelligence Problem"
+        "Need to understand and augment human intelligence too"
+        "HTM is an exciting R&D project"
+        "Using Clojure's thinking and tools can change the game"
+        "I would love to interest Clojure's great community in HTM"))
     (slide :title "Resources"
       (ul
-        (li (util/url "http://www.luminusweb.net/"))
-        (li (util/url "http://hoplon.io/"))
-        (li (util/url "http://clojure-liberator.github.io/liberator/"))
-        (li (util/url "http://http-kit.org/"))
-        (li (util/url "http://clojure-doc.org/"))
-        (li (util/url "http://clojurewebdev.com/"))))))
+        (li (util/url "http://numenta.org/"))
+        (li (util/url "http://inbits.com/"))
+        (li (util/url "http://github.com/fergalbyrne/clortex"))))
+
+    (slide :title "Thanks & Adios"
+      (fragment-list
+        "Jeff Hawkins, Matt & many friends at Numenta and NuPIC"
+       "Rich Hickey, Stuart and many more in the Clojure world"
+        "Alex Miller, Carin Meier for their friendly advice"
+
+))
+
+           ))

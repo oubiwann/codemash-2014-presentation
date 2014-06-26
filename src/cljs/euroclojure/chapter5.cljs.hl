@@ -29,15 +29,16 @@
        "Answers questions about 'where does this go?'"
        "Everything's either 'core' or 'integration'"
        "Core: a datomic database for the neocortex"
+       "Core: each 'patch' of neurons is a graph (a map)"
        "Integration: algorithms, encoders, classifiers, SDRs"
        "+ visualisers, management, metrics..."))
     (slide :title "Key Clojure Libraries & Tools"
       (quicklist
-       "`datomic` for the core (+`adi` in places)"
-       "`quil`/Processing libs for visualisation and GUI"
-       "`incanter` for exploratory data science"
-       "`lein-midje-doc` for literate documentation/test"
-       ""))
-    (slide :title "WebSocket example"
-      (sample-code/get-http-websocket)
-      (notes "Note the unified API, allowing us to degrade to long polling"))))
+       "datomic for the core (+adi in places)"
+       "quil/Processing libs for visualisation and GUI"
+       "incanter for exploratory data science"
+       "lein-midje-doc for literate documentation/test"
+       "hoplon-reveal-js for presentations"
+       "LightTable for a lovely editing experience"
+       ))
+           ))
