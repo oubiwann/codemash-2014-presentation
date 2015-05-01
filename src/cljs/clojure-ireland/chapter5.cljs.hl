@@ -1,6 +1,6 @@
-(ns lambdajam.chapter5
+(ns clojure-ireland.chapter5
     (:require [hoplon.reveal :refer [chapter slide notes quicklist]]
-              [lambdajam.sample-code :as sample-code]))
+              [clojure-ireland.sample-code :as sample-code]))
 
 
 (defn slides []

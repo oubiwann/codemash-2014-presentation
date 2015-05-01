@@ -1,4 +1,4 @@
-(ns lambdajam.chapter7
+(ns clojure-ireland.chapter7
   (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]
               [hoplon.util :as util]))
 

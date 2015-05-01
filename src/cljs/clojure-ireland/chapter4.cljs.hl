@@ -1,7 +1,7 @@
-(ns lambdajam.chapter4
+(ns clojure-ireland.chapter4
   (:require [hoplon.reveal
              :refer [chapter slide notes highlight quicklist fragment-list annotation bullet]]
-            [lambdajam.sample-code :as sample-code]))
+            [clojure-ireland.sample-code :as sample-code]))
 
 
 (defn slides []

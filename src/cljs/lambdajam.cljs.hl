@@ -1,6 +1,8 @@
-(page "clortex-presentation.html"
+(page "lambdajam.html"
       (:require [hoplon.reveal :refer [slideshow]]
-                [lambdajam.chapter1 :as ch1]
+                [lambdajam.ch1-intro :as ch1]
+                [lambdajam.intro :as intro]
+                [lambdajam.motivation :as motivation]
                 [lambdajam.demo :as demo]
                 [lambdajam.chapter2 :as ch2]
                 [lambdajam.chapter3 :as ch3]
@@ -16,10 +18,13 @@
   (body
     (slideshow :theme "sky"
       (ch1/slides)
-      (demo/slides)
+               ;(intro/slides)
+               (motivation/slides)
       (ch2/slides)
       (ch3/slides)
       (ch4/slides)
       (ch5/slides)
       (ch6/slides)
-      (ch7/slides))))
+      (ch7/slides)
+      #_(demo/slides)
+               )))

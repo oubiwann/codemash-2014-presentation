@@ -1,4 +1,4 @@
-(ns lambdajam.sample-code
+(ns clojure-ireland.sample-code
     (:require [hoplon.reveal :refer [highlight]]))
 
 

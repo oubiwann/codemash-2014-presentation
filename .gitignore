@@ -2,3 +2,5 @@ resources/public/
 .boot/
 target
 .lein-*
+.idea/
+hoplon_reveal_js.iml

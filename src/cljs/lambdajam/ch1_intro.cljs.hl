@@ -1,5 +1,5 @@
-(ns lambdajam.chapter1
-    (:require [hoplon.reveal :refer [intro bullet]]))
+(ns lambdajam.ch1-intro
+    (:require [hoplon.reveal :refer [intro bullet slide annotation notes]]))
 
 
 (defn slides []
@@ -7,4 +7,5 @@
     (bullet "Machine Intelligence based on Jeff Hawkins' HTM Theory")
          (bullet "Fergal Byrne @fergbyrne")
          (img :src "img/cave-painting.jpg")
-    ))
+    )
+)
