@@ -5,69 +5,23 @@
 
 
 (defn slides []
-  (chapter :title "Clortex"
-           (slide :title "Numenta's NuPIC"
-                  (fragment-list
-                   "In development since 2005"
-                   "Partially implements HTM/CLA"
-                   "Written in Python and C++"
-                   (bullet "Open Source - see " (a :href "http://numenta.org" "Numenta.org")))
+  (chapter :title "beyond a single layer"
+           (slide :title "a multilayer model"
+                  (img :src "img/Multilayer Flow Diagram.png" :style "border: 0")
                   (notes ""))
-           (slide :title "Numenta's NuPIC: Strengths"
-                  (fragment-list
-                   "Skilled dev team at Numenta with Jeff leading"
-                   "Numenta eat their own dog food - Grok uses NuPIC"
-                   "Operates using a subset of HTM/CLA principles"
-                   "Tunable using swarming on your data"
-                   "Works well on streaming scalar (e.g. machine-generated) data"
-                   (bullet "Great community - join us at " (a :href "http://numenta.org" "Numenta.org")))
-                  (notes ""))
-           (slide :title "Limitations"
-                  (fragment-list
-                   "Codebase evolved over time, not built in one go"
-                   "Difficult/scary to rewrite for flexibility"
-                   "Uses OO with large, coupled classes (~1500 LOC per class)"
-                   "Need to swarm to find parameters, no real-time control"
-                   "Not easy to extend beyond streaming scalar use case")
-                  (notes ""))
-           (slide :title "Architect, n.:"
-                  (blockquote :cite "http://www.quotationspage.com/quotes/Ambrose_Bierce/"
-                              :class "fragment" :fragment-index 0
-                              (p "One who drafts a plan of your house, and plans a draft of your money."))
-                  (annotation :class "fragment" :fragment-index 1 :align "right"
-                              "Ambrose Bierce, The Devil's Dictionary")
+           ; https://upload.wikimedia.org/wikipedia/commons/1/13/A_Trajectory_Through_Phase_Space_in_a_Lorenz_Attractor.gif
+           (slide :title "dynamical systems"
 
-                  (notes " "))
-           (slide :title "Clortex: Requirements"
-                  (fragment-list
-                   "Directly Analogous to HTM/CLA Theory"
-                   "Transparently Understandable Source Code"
-                   "Directly Observable Data"
-                   "Sufficiently Performant"
-                   "Useful Metrics"
-                   "Appropriate Platform")
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/mT3vfSQePcs?rel=0"
+                          :frameborder 0)
+                  ;(annotation "bit.ly/glass-cortex")
                   (notes ""))
-           (slide :title "Direct Analogy to Theory"
-                  (fragment-list
-                   "Each element of the theory appears in the software"
-                   "Regions contain Layers of Neurons in Columns"
-                   "Neurons have Proximal and Feedforward Dendrites"
-                   "Synapses connect/disconnect based on Permanence"
-                   "Strategies for Connection, Inhibition, Topology etc.")
+           (slide :title "dynamical systems"
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/6i57udsPKms?rel=0"
+                          :frameborder 0)
+                  ;(annotation "bit.ly/glass-cortex")
                   (notes ""))
-           (slide :title "Russ Miles: Axioms for Architectural Simplicity"
-                  (fragment-list
-                   "Your Software’s First Role is to be Useful"
-                   "The best software is that which is not needed at all"
-                   "Human Comprehension is King"
-                   "Machine Sympathy is Queen"
-                   "Software is a Process of R&D"
-                   "Software Development is an Extremely Challenging Intellectual Pursuit")
-                  (notes ""))
-           #_(slide :title "More complex decision tree"
-                  (img :src "img/complex-liberator.png")
-                  "UNDERSTANDING, n. A cerebral secretion that enables one having it to know a house from a horse by the roof on the house. Its nature and laws have been exhaustively expounded
-                  by Locke, who rode a house, and Kant, who lived in a horse."
-                  "It is a mistake to think you can solve any major problems just with potatoes.
-[info][add][mail][note]Douglas Adams")
+
 ))

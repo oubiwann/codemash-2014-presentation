@@ -4,63 +4,52 @@
 
 
 (defn slides []
-  (chapter :title "Theory: Hierarchical Temporal Memory"
-           (slide :title "Six Key Principles"
-                  (fragment-list
-                   "On-line Learning from Streaming Data"
-                   "Hierarchy of Memory Regions"
-                   "Sequence Memory"
-                   "Sparse Distributed Representations"
-                   "All Regions are both Sensory and Motor"
-                   "Attention")
-                  (notes ""))
-           (slide :title "On-line Learning from Streaming Data"
-                  (fragment-list
-                   "Up to 10 million senses feed the brain"
-                   "We don't (can't) store this data"
-                   "We build models from live data"
-                   "Models are updated with new data"))
-           (slide :title "Hierarchy of Memory Regions"
-                  (fragment-list
-                   "Sensory data enters at the bottom"
-                   "Models are built in every region"
-                   "Things change more slowly as you go up"
-                   "Hierarchy enables sequences of sequences"
-                   "The hierarchy works upwards and downwards"))
-           (slide :title "Sequence Memory"
-                  (fragment-list
-                   "All sensory data involves time"
-                   "Sequence memory allows predictions"
-                   "Structure in data is elaborated over time"
-                   "Sequences can be composed in hierarchy"))
-           (slide :title "Sparse Distributed Representations"
-                  (fragment-list
-                   "In each region, many neurons, few are active"
-                   "SDRs represent spatial patterns"
-                   "SDRs have many useful properties:"
-                   "Fault-tolerant, semantic operations, high-capacity"
-                   "Key to understanding and building intelligent systems"))
-           (slide :title "All Regions are both Sensory and Motor"
-                  (fragment-list
-                   "Every region processes sensory data and produces behaviour"
-                   "Behaviour provides context for sensory data"
-                   "Structure in the model is navigated via behaviour"
-                   "The neocortex learns to control the old brain"
-                   "A sequence memory is a sensorimotor model of the world"))
-           (slide :title "Attention"
-                  (fragment-list
-                   "We use attention to manage the neocortex"
-                   "Attention allows for planning and previsualisation"
-                   "Novel data or anomalies can 'demand attention'"
-                   "Whole sub-hierarchies can be switched on or off"))
-           (slide :title "The Neocortex - Layers"
-                  (p :class "fragment" :fragment-index 1 :align "right"
-                     "Drawing by Ramon y Cahal, 1911")
-                  (img :src "img/image754-cortical-layers.png")
+  (chapter :title "mathematics of htm"
+           (slide :title "Pattern Memory"
+                  (p :style "padding: 0.4em" " ")
+                  (p "For each feedforward vector \\(\\mathbf{x}_t\\), "
+                     "each neuron \\({P_i}\\) has a (logical) proximal dendrite connection vector "
+                     "\\(\\mathbf{c}_{P_i}\\).")
+                  (p :style "padding: 0.4em" " ")
+                  (p :class "fragment" :fragment-index 1 "We calculate the " (em "feedforward overlap") ":")
+                  (p :style "padding: 0.4em" " ")
+                  (p :class "fragment" :fragment-index 2 "\\(o^{\\textrm{ff}}_{P_i}(\\mathbf{x}_t) = \\mathbf{x}_t \\cdot \\mathbf{c}_{P_i}\\) ")
                   (notes " "))
-           (slide :title "The Neocortex - Neurons"
-                  (img :src "img/model-neuron.jpg")
+           (slide :title "Transition Memory"
+                  (p :style "padding: 0.4em" " ")
+                  (p "For each previous SDR \\(\\mathbf{y}_{\\textrm{SDR}}^{t-1}\\), "
+                     "each dendrite segment \\({D_k}\\) evaluates the product of the"
+                     " SDR with its own connection vector and becomes active if that "
+                     "exceeds a threshold:")
+                  (p :class "fragment" :fragment-index 1
+                     "\\(s_k = \\delta(\\mathbf{y}_{\\textrm{SDR}}^{t-1} \\cdot \\mathbf{c}_{D_k} \\ge \\theta)\\)")
+                  (p :style "padding: 0.4em" " ")
+
+                  (p :class "fragment" :fragment-index 2
+                     "\\(o^{\\textrm{pred}}=\\sum\\limits_{o_k^{t} \\ge \\lambda_k}{s_k}\\)")
                   (notes " "))
+
+           (slide :title "Neuron Firing"
+                  (p :style "padding: 0.4em" " ")
+                  (p "\\(d_j =  \\frac{\\partial V_j}{\\partial t} = "
+                     "\\alpha_j o^{\\textrm{ff}}_{P_j} + "
+                     "\\beta_j o^{\\textrm{pred}}_{P_j}\\)")
+                  (p :style "padding: 0.4em" " ")
+                  (p :class "fragment" :fragment-index 1 "Time to fire is given by:")
+                  (p :style "padding: 0.4em" " ")
+                  (p :class "fragment" :fragment-index 2 "\\(\\tau_{P_j} = "
+                     "\\gamma_P \\frac{1}{d_j}\\) (and "
+                     "\\(\\tau_I = \\gamma_I \\frac{1}{d_I}\\))")
+                  (notes " "))
+
+           (slide :title "SDR Formation"
+                  (p :style "padding: 0.4em" " ")
+                  (p "\\(\\mathbb{S} = \\mathbb{P}^{\\textrm{pred}}"
+                     " \\parallel \\mathbb{I}^{\\textrm{pred}} \\parallel "
+                     "\\mathbb{I}^{\\textrm{ff}} \\parallel \\mathbb{P}^{\\textrm{burst}} "
+                     "\\parallel \\mathbb{I}^{\\textrm{spread}}\\)")
+                  (notes " "))
+
 
            ;image754-cortical-layers
 
