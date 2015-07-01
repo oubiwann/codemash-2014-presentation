@@ -1,0 +1,44 @@
+(ns clojure-ireland-20150701.chapter5
+    (:require [hoplon.reveal :refer [chapter slide notes quicklist]]
+              [clojure-ireland-20150701.sample-code :as sample-code]))
+
+
+(defn slides []
+  (chapter :title "Clortex Design Decisions"
+    (slide :title "#1 Just Use Data!"
+     (quicklist
+      "Everything modelled using simple maps, vectors and sets"
+      "Layers are vectors of columns (vectors of neurons)"
+      "Neurons are a map of `:proximal-dendrite` and `:distal-dendrites`"
+      "Dendrites are vectors of synapses"
+      "Synapses are maps with `:permanence` and `:pre-synaptic-neuron` (a ref)"
+      "All done in a one-page Datomic (adi) schema"
+      #_"$$\\left( \\sum_{k=1}^n a_k b_k \\right)^2 \\leq \\left( \\sum_{k=1}^n a_k^2 \\right) \\left( \\sum_{k=1}^n b_k^2 \\right)$$"
+      ))
+    (slide :title "ADI Schema for Clortex"
+      (sample-code/get-adi-schema))
+    (slide :title "#2 Clojure & its Ecosystem"
+      (quicklist
+       "Clojure Data instead of 'Domain Objects'"
+       "Algorithms just functions of data"
+       "'Components' just look at data"
+       "Composable, swappable, scaleable"
+       "Use 'standard' libraries in simple combinations"))
+    (slide :title "#3 Apply Russ Miles' Life Preserver"
+      (quicklist
+       "Answers questions about 'where does this go?'"
+       "Everything's either 'core' or 'integration'"
+       "Core: a datomic database for the neocortex"
+       "Core: each 'patch' of neurons is a graph (a map)"
+       "Integration: algorithms, encoders, classifiers, SDRs"
+       "+ visualisers, management, metrics..."))
+    (slide :title "Key Clojure Libraries & Tools"
+      (quicklist
+       "datomic for the core (+adi in places)"
+       "quil/Processing libs for visualisation and GUI"
+       "incanter for exploratory data science"
+       "lein-midje-doc for literate documentation/test"
+       "hoplon-reveal-js for presentations"
+       "LightTable for a lovely editing experience"
+       ))
+           ))
