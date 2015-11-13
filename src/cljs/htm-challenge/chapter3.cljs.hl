@@ -1,0 +1,56 @@
+(ns htm-challenge.chapter3
+  (:require [hoplon.reveal :refer [chapter slide notes bullet quicklist fragment-list annotation]]
+            [htm-challenge.sample-code :as sample-code]))
+
+
+(defn slides []
+  (chapter :title "mathematics of htm"
+           (slide :title "Pattern Memory"
+                  (p :style "padding: 0.4em" " ")
+                  (p "For each feedforward vector \\(\\mathbf{x}_t\\), "
+                     "each neuron \\({P_i}\\) has a (logical) proximal dendrite connection vector "
+                     "\\(\\mathbf{c}_{P_i}\\).")
+                  (p :style "padding: 0.4em" " ")
+                  (p :class "fragment" :fragment-index 1 "We calculate the " (em "feedforward overlap") ":")
+                  (p :style "padding: 0.4em" " ")
+                  (p :class "fragment" :fragment-index 2 "\\(o^{\\textrm{ff}}_{P_i}(\\mathbf{x}_t) = \\mathbf{x}_t \\cdot \\mathbf{c}_{P_i}\\) ")
+                  (notes " "))
+           (slide :title "Transition Memory"
+                  (p :style "padding: 0.4em" " ")
+                  (p "For each previous SDR \\(\\mathbf{y}_{\\textrm{SDR}}^{t-1}\\), "
+                     "each dendrite segment \\({D_k}\\) evaluates the product of the"
+                     " SDR with its own connection vector and becomes active if that "
+                     "exceeds a threshold:")
+                  (p :class "fragment" :fragment-index 1
+                     "\\(s_k = \\delta(\\mathbf{y}_{\\textrm{SDR}}^{t-1} \\cdot \\mathbf{c}_{D_k} \\ge \\theta)\\)")
+                  (p :style "padding: 0.4em" " ")
+
+                  (p :class "fragment" :fragment-index 2
+                     "\\(o^{\\textrm{pred}}=\\sum\\limits_{o_k^{t} \\ge \\lambda_k}{s_k}\\)")
+                  (notes " "))
+
+           (slide :title "Neuron Firing"
+                  (p :style "padding: 0.4em" " ")
+                  (p "\\(d_j =  \\frac{\\partial V_j}{\\partial t} = "
+                     "\\alpha_j o^{\\textrm{ff}}_{P_j} + "
+                     "\\beta_j o^{\\textrm{pred}}_{P_j}\\)")
+                  (p :style "padding: 0.4em" " ")
+                  (p :class "fragment" :fragment-index 1 "Time to fire is given by:")
+                  (p :style "padding: 0.4em" " ")
+                  (p :class "fragment" :fragment-index 2 "\\(\\tau_{P_j} = "
+                     "\\gamma_P \\frac{1}{d_j}\\) (and "
+                     "\\(\\tau_I = \\gamma_I \\frac{1}{d_I}\\))")
+                  (notes " "))
+
+           (slide :title "SDR Formation"
+                  (p :style "padding: 0.4em" " ")
+                  (p "\\(\\mathbb{S} = \\mathbb{P}^{\\textrm{pred}}"
+                     " \\parallel \\mathbb{I}^{\\textrm{pred}} \\parallel "
+                     "\\mathbb{I}^{\\textrm{ff}} \\parallel \\mathbb{P}^{\\textrm{burst}} "
+                     "\\parallel \\mathbb{I}^{\\textrm{spread}}\\)")
+                  (notes " "))
+
+
+           ;image754-cortical-layers
+
+))

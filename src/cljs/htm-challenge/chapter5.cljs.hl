@@ -1,0 +1,17 @@
+(ns htm-challenge.chapter5
+    (:require [hoplon.reveal :refer [chapter slide notes fragment-list quicklist]]
+              [htm-challenge.sample-code :as sample-code]))
+
+
+(defn slides []
+  (chapter :title "summing up"
+    (slide :title "the brain is a dynamical systems computer"
+     (fragment-list
+      "we have a mathematical model for cortical function"
+      "layer 4 in cortex models real world dynamics"
+      "layers 2 and 3 characterise the real world"
+      "layer 1 provides top-down context"
+      "layer 5 acts on the world"
+      "layer 6 is the OS of the brain"
+      ))
+           ))
