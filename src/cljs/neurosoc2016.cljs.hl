@@ -1,0 +1,29 @@
+(page "neurosoc2016.html"
+      (:require [hoplon.reveal :refer [slideshow]]
+                [neurosoc.ch1-intro :as ch1]
+                [neurosoc.intro :as intro]
+                [neurosoc.motivation :as motivation]
+                [htm-challenge.demo :as demo]
+                [neurosoc.chapter2 :as ch2]
+                ;[htm-challenge.chapter3 :as ch3]
+                [neurosoc.chapter4 :as ch4]
+                [neurosoc.chapter5 :as ch5]
+                [htm-challenge.chapter6 :as ch6]
+                [neurosoc.chapter7 :as ch7]))
+
+
+(html
+  (head
+        (title "From Synapses to Symphonies: The Algorithm of the Brain"))
+  (body
+    (slideshow :theme "sky"
+      (ch1/slides)
+               (intro/slides)
+               (motivation/slides)
+      (ch2/slides)
+      ;(ch3/slides)
+      (ch4/slides)
+      (ch5/slides)
+      ;(demo/slides)
+      (ch7/slides)
+               )))

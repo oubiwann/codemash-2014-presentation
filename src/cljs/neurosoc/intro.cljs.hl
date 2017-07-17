@@ -1,0 +1,60 @@
+(ns neurosoc.intro
+  (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]))
+(defn slides []
+  (chapter :title "Motivation - A World of Complex Dynamics"
+  (slide :title "How do birds do this?"
+
+                    (iframe :width 853 :height 480
+                            :src "https://www.youtube.com/embed/b8eZJnbDHIg?rel=0"
+                            :frameborder 0)
+                    (annotation "https://youtu.be/b8eZJnbDHIg")
+                    (notes ""))
+  (slide :title "How do we do this?"
+
+                    (iframe :width 853 :height 480
+                            :src "https://www.youtube.com/embed/M8DhEwefYqc?rel=0"
+                            :frameborder 0)
+                    (annotation "https://youtu.be/M8DhEwefYqc")
+                    (notes ""))
+  (slide :title "A Volleyball Serve:"
+(p :class "fragment" :fragment-index 1
+"$$\\Arrowvert v_0 \\Arrowvert = \\sqrt{\\frac{g(d_T)^2}{2d_T \\sin(\\theta)\\cos(\\theta) + 2h \\cos^2(\\theta)}}$$")
+(p :class "fragment" :fragment-index 2
+"$$ \\theta = tan^{−1}\\left( {\\frac {\\frac {h_N + r_B − h}{d_N} + \\frac {h d_N}{d^2_T}}{1 − \\frac {d_N}{d_T}} } \\right) $$"
+                    (annotation "Lithio, D., & Webb, E. (2006). Optimizing a volleyball serve")
+                    )
+                    (notes ""))
+  (slide :title "Including drag.."
+
+(p :class "fragment" :fragment-index 1
+"$$ y = \\frac{m}{K_d}\\left({ ln(e^{2t \\sqrt{\\frac{gK_d}{m}}} + 1) − t \\sqrt{\\frac{g K_d}{m}}}\\right) $$")
+(p :class "fragment" :fragment-index 2
+                    (annotation "Lithio, D., & Webb, E. (2006). Optimizing a volleyball serve")
+                    )
+                    (notes ""))
+  (slide :title "And spin.."
+(p :class "fragment" :fragment-index 1
+"$$v'_x = −\\frac{K_d v_x}{m} \\sqrt{v^2_x + v^2_y + \\frac{K_s \\omega v_y}{m}}$$"
+)
+(p :class "fragment" :fragment-index 2
+"$$v'_y = -g - \\frac{K_d v_y}{m} \\sqrt{v^2_x + v^2_y} - \\frac{K_s \\omega v_x}{m} $$"
+                    (annotation "Lithio, D., & Webb, E. (2006). Optimizing a volleyball serve")
+                    )
+                    (notes ""))
+(slide :title "No, we do this"
+                    (img :src "img/hurling-practise.png" :style "border: 0")
+                    (annotation "http://smythstoys.com")
+                    (notes ""))
+(slide :title "and this.."
+                    (img :src "img/Boys_School_Collage_600.jpg" :style "border: 0")
+                    (annotation "http://borrisoleigh.ie")
+                    (notes ""))
+(slide :title "and this"
+                    (img :src "img/Prior Collage 2 600.jpg" :style "border: 0")
+                    (annotation "http://borrisoleigh.ie")
+                    (notes ""))
+                    ; Boys_School_Collage_600
+                    ; https://www.youtube.com/watch?v=zhPpiAbnAZ8
+               ; b8eZJnbDHIg
+
+           ))
