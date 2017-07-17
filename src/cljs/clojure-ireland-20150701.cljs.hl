@@ -1,0 +1,29 @@
+(page "clojure-ireland-20150701.html"
+      (:require [hoplon.reveal :refer [slideshow]]
+                [clojure-ireland-20150701.ch1-intro :as ch1]
+                [clojure-ireland-20150701.intro :as intro]
+                [clojure-ireland-20150701.motivation :as motivation]
+                [clojure-ireland-20150701.demo :as demo]
+                [clojure-ireland-20150701.chapter2 :as ch2]
+                [clojure-ireland-20150701.chapter3 :as ch3]
+                [clojure-ireland-20150701.chapter4 :as ch4]
+                [clojure-ireland-20150701.chapter5 :as ch5]
+                [clojure-ireland-20150701.chapter6 :as ch6]
+                [clojure-ireland-20150701.chapter7 :as ch7]))
+
+
+(html
+  (head
+        (title "From Synapses to Symphonies: The Algorithm of the Brain"))
+  (body
+    (slideshow :theme "sky"
+      (ch1/slides)
+               ;(intro/slides)
+               (motivation/slides)
+      (ch2/slides)
+      (ch3/slides)
+      (ch4/slides)
+      (ch5/slides)
+      (demo/slides)
+      (ch7/slides)
+               )))

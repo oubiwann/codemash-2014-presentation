@@ -111,9 +111,9 @@ var Reveal = (function(){
 			viewDistance: 3,
 
 			// Script dependencies to load
-			dependencies: []
 
-		},
+      dependencies: []
+    },
 
 		// Flags if reveal.js is loaded (has dispatched the 'ready' event)
 		loaded = false,

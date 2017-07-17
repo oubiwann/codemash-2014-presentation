@@ -1,0 +1,38 @@
+(ns htm-challenge.chapter4
+  (:require [hoplon.reveal
+             :refer [chapter slide notes highlight quicklist fragment-list annotation bullet]]
+            [htm-challenge.sample-code :as sample-code]))
+
+
+(defn slides []
+  (chapter :title "beyond a single layer"
+  (slide :title "a multilayer model"
+                    (img :src "img/Dynamic Multilayer Flow.png" :style "border: 0")
+                    (notes ""))
+           #_(slide :title "a multilayer model"
+                  (img :src "img/Multilayer Flow Diagram.png" :style "border: 0")
+                  (notes ""))
+  (slide :title "Model States and Transitions (L4)"
+                    (notes ""))
+  (slide :title "Run a Simulation Forward (L6)"
+                    (notes ""))
+  (slide :title "Characterise the Dynamics of a System (L2/3 Temporal Pooling)"
+                    (notes ""))
+  (slide :title "Model the Evolution of a Nonstationary System (L2/3 Sequence Learning)"
+                    (notes ""))
+  (slide :title "Extract Chaotic Signal from Noise (L4)"
+                    (notes ""))
+  (slide :title "Detect and Measure Causal Relationships"
+  (annotation "Sugihara et al. " (em "Detecting causality in complex ecosystems") " [2012]")
+                    (notes ""))
+  (slide :title "Communicate Between Regions"
+      (annotation "Marcus and Williams " (em "Symbolic Dynamics") " [2008]")
+                    (notes ""))
+  (slide :title "Communicate Between People"
+      (annotation "Elman, J. " (em "Language as a Dynamical System") " [1995]")
+                    (notes ""))
+  (slide :title "Control Limbs, Tools and Mechanical Devices"
+      (annotation "E. Ott " (em "Controlling Chaos") " [2006]")
+                    (notes ""))
+
+))

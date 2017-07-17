@@ -1,0 +1,28 @@
+(ns lambdajam.intro
+  (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]))
+(defn slides []
+  (chapter :title "LambdaJam 2014"
+               (slide :title "1983"
+                      (fragment-list
+                       "Aged 12, got a 16K Sinclair Spectrum for Christmas.."
+                       )
+
+                       (img :class "fragment" :fragment-index 9
+                            :src "img/Sinclair_ZX_Spectrum.jpg" :width "50%" )
+                      (annotation :class "fragment" :fragment-index 10
+                                  "Wikipedia (CC License)")
+
+                      ;
+                  (notes " "))
+                (slide :title "1995"
+                      (fragment-list
+                       "Founded Adnet in early 1995, used a pre-LAMP LAMP"
+                       "Linux v1.0"
+                       "NCSA httpd ('a patchy' version became Apache)"
+                       "mSQL v1.0 (fork became mySQL)"
+                       "Perl and later PHP/FI (became PHP)"
+                       "No OO support, so programming 'functionally' for 20 years")
+                  (notes " "))
+
+
+           ))

@@ -1,0 +1,14 @@
+(ns clojure-ireland-20150701.chapter2
+  (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]
+            [clojure-ireland-20150701.sample-code :as sample-code]))
+
+(defn slides []
+  (chapter :title "the HTM models"
+           (slide :title "a HTM model neuron"
+                  #_(img :src "img/HTM_CorticalLearningAlgorithmsA-1c.jpg")
+                  (img :src "img/Neuron Model.png" :style "border: 0")
+                  (notes " "))
+           (slide :title "an HTM column"
+                  (img :src "img/Column.png" :style "border: 0")
+                  (notes " "))
+           ))

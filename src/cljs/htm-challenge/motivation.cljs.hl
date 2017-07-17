@@ -1,0 +1,31 @@
+(ns htm-challenge.motivation
+  (:require [hoplon.reveal :refer [iframe chapter slide notes bullet fragment-list annotation]]
+            [htm-challenge.sample-code :as sample-code]))
+
+(defn slides []
+  (chapter :title "luckily..."
+(slide :title "dynamical systems"
+
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/mT3vfSQePcs?rel=0"
+                          :frameborder 0)
+                  (annotation "https://youtu.be/mT3vfSQePcs")
+                  (notes ""))
+                  ; https://www.youtube.com/watch?v=zhPpiAbnAZ8
+           (slide :title "dynamical systems"
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/6i57udsPKms?rel=0"
+                          :frameborder 0)
+                  (annotation "https://youtu.be/6i57udsPKms")
+                  (notes ""))
+                  ; https://www.youtube.com/watch?v=zhPpiAbnAZ8
+           (slide :title "hotgym as a dynamical system"
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/SUPCVfzeK2I?rel=0"
+                          :frameborder 0)
+                  (annotation "https://youtu.be/SUPCVfzeK2I")
+                  (notes ""))
+
+                  ; https://youtu.be/SUPCVfzeK2I
+
+           ))

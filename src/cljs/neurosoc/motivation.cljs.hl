@@ -1,0 +1,14 @@
+(ns neurosoc.motivation
+  (:require [hoplon.reveal :refer [iframe chapter slide notes bullet fragment-list annotation]]
+            [htm-challenge.sample-code :as sample-code]))
+
+(defn slides []
+  (chapter :title "results from applied maths"
+           (slide :title "dynamical systems"
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/6i57udsPKms?rel=0"
+                          :frameborder 0)
+                  (annotation "https://youtu.be/6i57udsPKms")
+                  (notes ""))
+
+           ))

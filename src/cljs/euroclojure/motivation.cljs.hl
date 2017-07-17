@@ -1,0 +1,83 @@
+(ns euroclojure.motivation
+  (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]
+            [euroclojure.sample-code :as sample-code]))
+
+(defn slides []
+  (chapter :title "Motivation"
+           (slide :title "Big Data"
+                  (a :href "http://asimovfan.wordpress.com"
+                     :target "_blank"
+                     (img :src "img/isaac-asimov-science-society-gather-knowledge-wisdom.jpg"))
+                  (annotation "asimovfan.wordpress.com")
+                  (notes " "))
+           (slide :title "Big data is like teenage sex:"
+                  (fragment-list
+                   "everyone talks about it"
+                   "nobody really knows how to do it"
+                   "everyone thinks everyone else is doing it"
+                   "so everyone claims they are doing it."
+                   )
+                  (annotation :class "fragment" :fragment-index 10
+                              (a :href "http://advanced-hindsight.com/"
+                                 (em "Dan Ariely")
+                                 ", Center for Advanced Hindsight at Duke University"))
+                  (notes " "))
+           (slide :title "Machine Learning Needs Human Intelligence"
+                  (ul :class "fragment" :fragment-index 0
+                     (li "Running an algorithm is often the easy part")
+                     (li "Most of the work is in preparing the data")
+                     (li "The rest of the work is about humans finding good models")
+                     (li "The machine cranks the wheel...")
+                      (li "Oh, and the rest of the rest of the work is interpreting results")
+                      )
+                  (notes " "))
+           (slide :title "A Limit Theorem"
+                  (a :href "http://www.gdargaud.net/Humor/QuotesScience.html"
+                     :class "fragment" :fragment-index 0
+                     :target "_blank"
+                     (img :src "img/Limit.jpg"))
+                  (annotation :class "fragment" :fragment-index 10
+                              (a :href "http://www.gdargaud.net/Humor/QuotesScience.html"
+                                 (em "Guillaume & Jennifer Dargaud's website") ", gdargaud.net"))
+
+                  (notes " "))
+           (slide :title "This is important"
+                  (ul :class "fragment" :fragment-index 0
+                     (li "Every detail of the financial world")
+                     (li "Security, Military decisions")
+                     (li "Education, Recruitment, Compensation")
+                     (li "Climate change and environmental regulation")
+                     (li "Medicine, viability of transplants, treatment")
+                     (li "<insert more things affecting your life here>")
+                      )
+                  (notes " "))
+           (slide :title "Remember What Isaac Said?"
+                  (a :class "fragment" :fragment-index 0
+                     :href "http://asimovfan.wordpress.com"
+                     :target "_blank"
+                     (img :src "img/isaac-asimov-science-society-gather-knowledge-wisdom.jpg"))
+                  (p :class "fragment" :fragment-index 1
+                     "This is about the gap between " (em "human") " knowledge and wisdom.
+                     When our knowledge is based on unwise interpretation of machine-augmented
+                     data science, we are looking at some 'challenges'."
+                      )
+                  (notes " "))
+           (slide :title "Some Potential Avenues"
+                  (fragment-list
+                   "Incrementally better machine learning: just a better hammer?"
+                   "Can we improve or augment human intelligence?"
+                   "Can we identify the mechanisms of intelligence in humans?"
+                   "Might intelligent machines save us from our own irrationality?"
+                   "Can a machine-human joint approach achieve something new?"
+                   "What can neuroscience teach us about intelligence?"
+                      )
+                  (notes " "))
+           (slide :title "Sadly, One Big Big Data Problem is.."
+                  (a :class "fragment" :fragment-index 0 :href "http://www.ncbi.nlm.nih.gov/pubmed/?term=neuroscience"
+                     :target "_blank"
+                     (img :src "img/neuroscience-timeline.png"))
+                  (annotation :class "fragment" :fragment-index 1 "PubMed, June 25th 2014")
+                  (annotation :class "fragment" :fragment-index 2 "One every 32 minutes (2013), 17 minutes (2014)")
+                  (notes " "))
+
+           ))

@@ -1,0 +1,32 @@
+(ns clojure-ireland-20150701.motivation
+  (:require [hoplon.reveal :refer [iframe chapter slide notes bullet fragment-list annotation]]
+            [clojure-ireland-20150701.sample-code :as sample-code]))
+
+(defn slides []
+  (chapter :title "some neuroscience"
+           (slide :title "the brain is big and complex..."
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/q8PeJtpT_UM?rel=0"
+                          :frameborder 0)
+                  (annotation "bit.ly/glass-cortex")
+                  (notes " "))
+           (slide :title "...more so at microscopic scales"
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/2QVy0n_rdBI?rel=0&t=21m45s"
+                          :frameborder 0)
+                  (annotation "bit.ly/dendrite-anim")
+                  (notes " ")) ;
+           (slide :title "and it's complex in time too"
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/EX7wzqAoeQA?rel=0"
+                          :frameborder 0)
+                  (annotation "bit.ly/10k-neurons")
+                  (notes " "))
+           (slide :title "But.. there is structure here"
+                  (img :src "img/HTM_CorticalLearningAlgorithmsB-1.jpg" :style "border: 0")
+                  (notes " "))
+           (slide :title "a real neuron"
+                  (img :src "img/Neuron3.jpg" :style "border: 0")
+                  (notes " "))
+
+           ))

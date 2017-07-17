@@ -1,0 +1,36 @@
+(ns euroclojure.krakow
+  (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]
+            [euroclojure.sample-code :as sample-code]))
+(defn slides []
+  (chapter :title "euroClojure 2014"
+               (slide :title "A Guy from Krakow"
+                  (img :class "fragment" :fragment-index 2 :width "50%" :src "img/pope.jpg")
+                    (annotation :class "fragment" :fragment-index 10
+                              (a :href "https://www.flickr.com/photos/bren/"
+                                 (em "Beyond Forgetting")
+                                 ", flickr.com (CC License)"))
+                  (notes " "))
+               (slide :title "A Guy from Dublin"
+                      (fragment-list
+                       "Aged 9, joined 1.25m people to see Pope in Dublin, 1979"
+                       "Aged 12, got a 16K Sinclair Spectrum for Christmas.."
+                       )
+
+                       (img :class "fragment" :fragment-index 9
+                            :src "img/Sinclair_ZX_Spectrum.jpg" :width "50%" )
+                      (annotation :class "fragment" :fragment-index 10
+                                  "Wikipedia (CC License)")
+
+                      ;
+                  (notes " "))
+                          #_(slide :title "Fast Forward"
+                      (fragment-list
+                       "Founded Adnet in early 1995, used a pre-LAMP LAMP"
+                       "Linux v1.0"
+                       "NCSA httpd ('a patchy' version became Apache)"
+                       "mSQL v1.0 (fork became mySQL)"
+                       "Perl and later PHP/FI (became PHP)")
+                  (notes " "))
+
+
+           ))

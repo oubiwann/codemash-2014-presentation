@@ -1,0 +1,29 @@
+(page "htm-challenge.html"
+      (:require [hoplon.reveal :refer [slideshow]]
+                [htm-challenge.ch1-intro :as ch1]
+                [htm-challenge.intro :as intro]
+                [htm-challenge.motivation :as motivation]
+                [htm-challenge.demo :as demo]
+                [htm-challenge.chapter2 :as ch2]
+                ;[htm-challenge.chapter3 :as ch3]
+                [htm-challenge.chapter4 :as ch4]
+                [htm-challenge.chapter5 :as ch5]
+                [htm-challenge.chapter6 :as ch6]
+                [htm-challenge.chapter7 :as ch7]))
+
+
+(html
+  (head
+        (title "From Synapses to Symphonies: The Algorithm of the Brain"))
+  (body
+    (slideshow :theme "sky"
+      (ch1/slides)
+               (intro/slides)
+               (motivation/slides)
+      (ch2/slides)
+      ;(ch3/slides)
+      (ch4/slides)
+      (ch5/slides)
+      ;(demo/slides)
+      (ch7/slides)
+               )))

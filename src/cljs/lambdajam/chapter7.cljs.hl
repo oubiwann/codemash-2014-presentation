@@ -1,0 +1,33 @@
+(ns lambdajam.chapter7
+  (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]
+              [hoplon.util :as util]))
+
+
+(defn slides []
+  (chapter :title "Summing Up"
+    (slide :title "Review"
+      (fragment-list
+        "Big Data is not just a Machine Intelligence Problem"
+        "Need to understand and augment human intelligence too"
+        "HTM is an exciting R&D project"
+        "Using Clojure's thinking and tools can change the game"
+        "I would love to interest Clojure's great community in HTM"))
+    (slide :title "Resources"
+      (ul
+        (li (util/url "http://numenta.org/"))
+        (li (util/url "http://inbits.com/"))
+        (li (util/url "http://github.com/fergalbyrne/clortex"))))
+
+    (slide :title "Thanks"
+      (fragment-list
+        "Jeff Hawkins, Matt, many friends @Numenta and NuPIC"
+       "Rich Hickey, Stuart and many more in the Clojure world"
+        "Alex Miller, Carin Meier for their friendly advice"
+
+))
+  (slide :title "Questions?"
+      (fragment-list
+    "@fergbyrne on Twitter, @fergalbyrne on Github"
+    "fergal@brenter.ie"
+    "http://inbits.com"
+    ))))

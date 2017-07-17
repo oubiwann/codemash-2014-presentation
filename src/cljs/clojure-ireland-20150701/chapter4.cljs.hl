@@ -1,0 +1,27 @@
+(ns clojure-ireland-20150701.chapter4
+  (:require [hoplon.reveal
+             :refer [chapter slide notes highlight quicklist fragment-list annotation bullet]]
+            [clojure-ireland-20150701.sample-code :as sample-code]))
+
+
+(defn slides []
+  (chapter :title "beyond a single layer"
+           (slide :title "a multilayer model"
+                  (img :src "img/Multilayer Flow Diagram.png" :style "border: 0")
+                  (notes ""))
+           ; https://upload.wikimedia.org/wikipedia/commons/1/13/A_Trajectory_Through_Phase_Space_in_a_Lorenz_Attractor.gif
+           (slide :title "dynamical systems"
+
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/mT3vfSQePcs?rel=0"
+                          :frameborder 0)
+                  ;(annotation "bit.ly/glass-cortex")
+                  (notes ""))
+           (slide :title "dynamical systems"
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/6i57udsPKms?rel=0"
+                          :frameborder 0)
+                  ;(annotation "bit.ly/glass-cortex")
+                  (notes ""))
+
+))

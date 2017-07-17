@@ -1,0 +1,80 @@
+(ns neurosoc.chapter2
+  (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]
+            [htm-challenge.sample-code :as sample-code]))
+
+(defn slides []
+  (chapter :title "the HTM models"
+           (slide :title "HTM model neuron"
+                  #_(img :src "img/HTM_CorticalLearningAlgorithmsA-1c.jpg")
+                  (img :src "img/Neuron Model.png" :style "border: 0")
+                  (notes " "))
+           (slide :title "HTM column"
+                  (img :src "img/Column.png" :style "border: 0")
+                  (notes " "))
+           (slide :title "Sparse Distributed Representation"
+                  (img :src "img/paCLA.png" :style "border: 0")
+                  (notes " "))
+           (slide :title "Pattern Memory"
+                                    (p :style "padding: 0.4em" " ")
+                                    (p "For each feedforward vector \\(\\mathbf{x}_t\\), "
+                                       "each neuron \\({P_i}\\) has a (logical) proximal dendrite connection vector "
+                                       "\\(\\mathbf{c}_{P_i}\\). " (em "Feedforward overlap") ":")
+                                    (p :style "padding: 0.4em" " ")
+                                    (p "\\(o^{\\textrm{ff}}_{P_i}(\\mathbf{x}_t) = \\mathbf{x}_t \\cdot \\mathbf{c}_{P_i}\\) ")
+                                    (notes " "))
+           (slide :title "Feedforward Matching"
+                   (img :src "img/SphereViz.png" :style "border: 0")
+                   (notes " "))
+                             (slide :title "Transition Memory"
+                                    (p :style "padding: 0.4em" " ")
+                                    (p "For each previous SDR \\(\\mathbf{y}_{\\textrm{SDR}}^{t-1}\\), "
+                                       "each dendrite segment \\({D_k}\\) evaluates the product of the"
+                                       " SDR with its own connection vector and becomes active if that "
+                                       "exceeds a threshold:")
+                                    (p "\\(s_k = \\delta(\\mathbf{y}_{\\textrm{SDR}}^{t-1} \\cdot \\mathbf{c}_{D_k} \\ge \\theta)\\)")
+                                    (p :style "padding: 0.4em" " ")
+
+                                    (p "\\(o^{\\textrm{pred}}=\\sum\\limits_{o_k^{t} \\ge \\lambda_k}{s_k}\\)")
+                                    (notes " "))
+
+                             (slide :title "Neuron Firing"
+                                    (p :style "padding: 0.4em" " ")
+                                    (p "\\(d_j =  \\frac{\\partial V_j}{\\partial t} = "
+                                       "\\alpha_j o^{\\textrm{ff}}_{P_j} + "
+                                       "\\beta_j o^{\\textrm{pred}}_{P_j}\\)")
+                                    (p :style "padding: 0.4em" " ")
+                                    (p "Time to fire is given by:")
+                                    (p :style "padding: 0.4em" " ")
+                                    (p "\\(\\tau_{P_j} = "
+                                       "\\gamma_P \\frac{1}{d_j}\\) (and "
+                                       "\\(\\tau_I = \\gamma_I \\frac{1}{d_I}\\))")
+                                    (notes " "))
+
+                             (slide :title "SDR Formation"
+                                    (p :style "padding: 0.4em" " ")
+                                    (p "\\(\\mathbb{S} = \\mathbb{P}^{\\textrm{pred}}"
+                                       " \\parallel \\mathbb{I}^{\\textrm{pred}} \\parallel "
+                                       "\\mathbb{I}^{\\textrm{ff}} \\parallel \\mathbb{P}^{\\textrm{burst}} "
+                                       "\\parallel \\mathbb{I}^{\\textrm{spread}}\\)")
+                                    (notes " "))
+
+
+                   (slide :title "Predicted and Correction Vectors"
+                                                (img :src "img/Prediction Error.png" :style "border: 0")
+
+                  (annotation "https://fergalbyrne.github.io/scifile.pdf")
+                                                (notes " "))
+
+                   (slide :title "Transition Prediction"
+                                                                   (img :src "img/Transition-Prediction.png" :style "border: 0")
+                  (annotation "https://fergalbyrne.github.io/scifile.pdf")
+                                                                   (notes " "))
+
+                   (slide :title "Multiple Prediction"
+                          (img :src "img/Multiple-Prediction.png" :style "width: 75%; border: 0")
+                  (annotation "https://fergalbyrne.github.io/scifile.pdf")
+
+
+                                                                   (notes " "))
+
+           ))

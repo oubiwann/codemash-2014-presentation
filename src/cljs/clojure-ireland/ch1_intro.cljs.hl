@@ -1,0 +1,13 @@
+(ns clojure-ireland.ch1-intro
+    (:require [hoplon.reveal :refer [intro bullet slide annotation notes]]))
+
+
+(defn slides []
+  (intro :title "Clortex & Comportex" :style "font-size: 24px;"
+    (bullet "HTM Machine Intelligence in Clojure")
+         (img :src "img/clortex-logo.png" :style "width: 20%; border:0")
+         (bullet "Fergal Byrne @fergbyrne")
+         (bullet "Clojure Ireland, 11th November 2014")
+         #_(img :src "img/cave-painting.jpg" :style "height: '40%'")
+    )
+)

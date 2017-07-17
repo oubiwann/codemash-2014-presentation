@@ -1,0 +1,54 @@
+(ns neurosoc.chapter7
+  (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]
+              [hoplon.util :as util]))
+
+
+(defn slides []
+  (chapter :title "references and resources"
+    (slide :title "resources"
+      (ul
+        (li (util/url "http://numenta.org/"))
+        (li (span (util/url "https://fergalbyrne.github.io/neurosoc2016.html") " [this talk]"))
+        (li (util/url "http://inbits.com/"))
+        (li (util/url "http://github.com/nupic-community/comportex"))))
+
+    (slide :title "References"
+    (annotation "Byrne, Fergal. "
+    "\"Encoding Reality: Prediction-Assisted Cortical Learning Algorithm in Hierarchical Temporal Memory.\""
+     (em " arXiv preprint arXiv:1509.08255 (2015)."))
+    (annotation "Byrne, Fergal. "
+    "\"Symphony from Synapses: Neocortex as a Universal Dynamical Systems Modeller using Hierarchical Temporal Memory.\""
+     (em " arXiv preprint arXiv:1512.05245 (2015)."))
+    (annotation "Lithio, Dan, and Eric Webb. "
+    "\"Optimizing a volleyball serve.\""
+    (em " Rose-Hulman Institute of Technology Undergraduate Math Journal 7 (2006)."))
+(annotation "Beer, Randall D. \"A dynamical systems perspective on agent-environment interaction.\" "
+(em "Artificial intelligence 72.1 (1995): 173-215."))
+
+(annotation "Elman, Jeffrey L. \"Language as a dynamical system.\" "
+(em "Mind as motion: Explorations in the dynamics of cognition (1995): 195-223."))
+
+(annotation "B. Marcus and S. Williams. "
+"\"Symbolic dynamics. 3(11):2923\", 2008. " (em "http://www.
+scholarpedia.org/article/Symbolic_dynamics.") " revision 143845.")
+
+(annotation "E. Ott. \"Controlling Chaos.\" 1(8):1699, 2006. " (em "http://www.scholarpedia.org/
+article/Controlling_chaos.") " revision 91167.")
+(annotation "George Sugihara, Robert May, Hao Ye, Chih-hao Hsieh, Ethan Deyle, Michael Fogarty, and
+Stephan Munch. \"Detecting causality in complex ecosystems.\"" (em " Science, 338(6106):496–500,
+2012"))
+    )
+    (slide :title "Acknowledgements"
+      (ul
+        (li "Jeff Hawkins, Subutai Ahmad, Matt, many friends at Numenta, Inc")
+        (li "Richard Crowder, Rob Freeman, Felix Andrews, Eric Laukien: HTM Community")
+       ))
+
+
+  (slide :title "Questions?"
+      (ul
+    (li "@fergbyrne on Twitter, @fergalbyrne on Github")
+    (li "fergal@brenter.ie")
+    (li"http://inbits.com")
+    ))
+           ))

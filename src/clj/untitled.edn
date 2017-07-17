@@ -1,0 +1,19 @@
+user=>   (use '[incanter core io stats charts datasets latex])
+nil
+user=> (require '[clj-time.core :as t])
+nil
+user=> (use '[igc surface-energy util] :reload)
+nil
+user=> (def timeline (read-dataset "/Users/fergalbyrne/Downloads/timeline.csv" :header true :skip 1))
+
+
+(defn year->ms [x] (.getMillis (t/date-time x)))
+(add-derived-column :date [:year] year->ms timeline)
+(def dateline (add-derived-column :date [:year] year->ms timeline))
+user=> (def p (time-series-plot :date :count :data dateline :title "Neuroscience Papers 1948-June 2014" :x-label "Year" :y-label "Papers Published"))
+#'user/p
+user=> (set-plot-theme p)
+#<JFreeChart org.jfree.chart.JFreeChart@62903e23>
+user=> (view p :width 800 :height 500)
+#<ChartFrame org.jfree.chart.ChartFrame[frame4,0,22,800x500,layout=java.awt.BorderLayout,title=Incanter Plot,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,22,800x478,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]>
+user=> (save p "neuroscience-timeline.png" :width 800 :height 500)

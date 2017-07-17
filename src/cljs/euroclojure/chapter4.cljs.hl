@@ -1,0 +1,73 @@
+(ns euroclojure.chapter4
+  (:require [hoplon.reveal
+             :refer [chapter slide notes highlight quicklist fragment-list annotation bullet]]
+            [euroclojure.sample-code :as sample-code]))
+
+
+(defn slides []
+  (chapter :title "Clortex"
+           (slide :title "Numenta's NuPIC"
+                  (fragment-list
+                   "In development since 2005"
+                   "Partially implements HTM/CLA"
+                   "Written in Python and C++"
+                   (bullet "Open Source - see " (a :href "http://numenta.org" "Numenta.org")))
+                  (notes ""))
+           (slide :title "Numenta's NuPIC: Strengths"
+                  (fragment-list
+                   "Skilled dev team at Numenta with Jeff leading"
+                   "Numenta eat their own dog food - Grok uses NuPIC"
+                   "Operates using a subset of HTM/CLA principles"
+                   "Tunable using swarming on your data"
+                   "Works well on streaming scalar (e.g. machine-generated) data"
+                   (bullet "Great community - join us at " (a :href "http://numenta.org" "Numenta.org")))
+                  (notes ""))
+           (slide :title "Limitations"
+                  (fragment-list
+                   "Codebase evolved over time, not built in one go"
+                   "Difficult/scary to rewrite for flexibility"
+                   "Uses OO with large, coupled classes (~1500 LOC per class)"
+                   "Need to swarm to find parameters, no real-time control"
+                   "Not easy to extend beyond streaming scalar use case")
+                  (notes ""))
+           (slide :title "Architect, n.:"
+                  (blockquote :cite "http://www.quotationspage.com/quotes/Ambrose_Bierce/"
+                              :class "fragment" :fragment-index 0
+                              (p "One who drafts a plan of your house, and plans a draft of your money."))
+                  (annotation :class "fragment" :fragment-index 1 :align "right"
+                              "Ambrose Bierce, The Devil's Dictionary")
+
+                  (notes " "))
+           (slide :title "Clortex: Requirements"
+                  (fragment-list
+                   "Directly Analogous to HTM/CLA Theory"
+                   "Transparently Understandable Source Code"
+                   "Directly Observable Data"
+                   "Sufficiently Performant"
+                   "Useful Metrics"
+                   "Appropriate Platform")
+                  (notes ""))
+           (slide :title "Direct Analogy to Theory"
+                  (fragment-list
+                   "Each element of the theory appears in the software"
+                   "Regions contain Layers of Neurons in Columns"
+                   "Neurons have Proximal and Feedforward Dendrites"
+                   "Synapses connect/disconnect based on Permanence"
+                   "Strategies for Connection, Inhibition, Topology etc.")
+                  (notes ""))
+           (slide :title "Russ Miles: Axioms for Architectural Simplicity"
+                  (fragment-list
+                   "Your Software’s First Role is to be Useful"
+                   "The best software is that which is not needed at all"
+                   "Human Comprehension is King"
+                   "Machine Sympathy is Queen"
+                   "Software is a Process of R&D"
+                   "Software Development is an Extremely Challenging Intellectual Pursuit")
+                  (notes ""))
+           #_(slide :title "More complex decision tree"
+                  (img :src "img/complex-liberator.png")
+                  "UNDERSTANDING, n. A cerebral secretion that enables one having it to know a house from a horse by the roof on the house. Its nature and laws have been exhaustively expounded
+                  by Locke, who rode a house, and Kant, who lived in a horse."
+                  "It is a mistake to think you can solve any major problems just with potatoes.
+[info][add][mail][note]Douglas Adams")
+))

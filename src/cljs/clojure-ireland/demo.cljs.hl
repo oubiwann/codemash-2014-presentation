@@ -1,0 +1,11 @@
+(ns clojure-ireland.demo
+    (:require [hoplon.reveal :refer [chapter slide notes bullet]]
+              [clojure-ireland.sample-code :as sample-code]))
+
+
+(defn slides []
+  (chapter :title "Demo!"
+           (slide
+            (img :src "img/clortex-logo.png" :border 0 :style "width: 400px; border: none")
+            )
+           ))

@@ -1,0 +1,58 @@
+(ns clojure-ireland-20150701.chapter6
+  (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]
+              [hoplon.util :as util]))
+
+
+(defn slides []
+  (chapter :title "Clojure and Datomic"
+    (slide :title "Some Numbers"
+      (fragment-list
+        "For each patch of neurons, 2048 columns x 32 cells"
+        "Each cells has 100s-1000s of lateral connections"
+        "Per patch, 2-300 million synapses"
+        "Sparseness => perhaps 1% of these used per timestep"
+        "Need 'virtual' access to the entire model"))
+    (slide :title "Using Datomic"
+      (fragment-list
+        "Entire db is a 'local value'"
+        "Access using Datalog queries, 'map-walking' or index walking"
+        "Peer library loads data on demand"
+        "Indexes don't contain pointers but the actual data"
+        "Clortex is a perfect use case for the Datomic design"))
+    (slide :title "Comportex & ComportexViz"
+      (fragment-list
+        "Developed by Felix Andrews in Clojure(script)"
+        "Full implementation of Cortical Learning Algorithm"
+        "In-memory persistent data structures"
+        "Testbed for new algorithms and theory"
+        "Clortex now a system-level design built around Comportex"))
+    (slide :title "Demo")
+    (slide :title "Review"
+      (fragment-list
+        "Big Data is not just a Machine Intelligence Problem"
+        "Must understand and augment human intelligence too"
+        "HTM is an exciting R&D project"
+        "Using Clojure's thinking and tools can change the game"))
+    (slide :title "Resources"
+      (ul
+        (li (util/url "http://numenta.org/"))
+        (li (util/url "http://inbits.com/"))
+        (li (util/url "http://github.com/nupic-community/clortex"))
+        (li (util/url "http://github.com/nupic-community/comportex"))
+        (li (util/url "http://leanpub.com/realsmartmachines"))
+       ))
+    (slide :title "Thanks"
+      (fragment-list
+        "Jeff Hawkins, Matt, many friends @Numenta and NuPIC"
+       "Rich Hickey, Stuart and many more in the Clojure world"
+        "Alex Miller, Carin Meier for their friendly advice"
+
+))
+           (slide :title "Questions?"
+      (fragment-list
+    "@fergbyrne on Twitter, @fergalbyrne on Github"
+    "fergal@brenter.ie"
+    "http://inbits.com"
+    ))
+
+           ))

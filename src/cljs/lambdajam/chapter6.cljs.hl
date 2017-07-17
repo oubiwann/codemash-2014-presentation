@@ -1,0 +1,46 @@
+(ns lambdajam.chapter6
+  (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]
+              [hoplon.util :as util]))
+
+
+(defn slides []
+  (chapter :title "Clojure and Datomic"
+    (slide :title "Some Numbers"
+      (fragment-list
+        "For each patch of neurons, 2048 columns x 32 cells"
+        "Each cells has 100s-1000s of lateral connections"
+        "Per patch, 2-300 million synapses"
+        "Sparseness => perhaps 1% of these used per timestep"
+        "Need 'virtual' access to the entire model"))
+    (slide :title "Using Datomic"
+      (fragment-list
+        "Entire db is a 'local value'"
+        "Access using Datalog queries, 'map-walking' or index walking"
+        "Peer library loads data on demand"
+        "Indexes don't contain pointers but the actual data"
+        "Clortex is a perfect use case for the Datomic design"))
+    (slide :title "Demo")
+    (slide :title "Review"
+      (fragment-list
+        "Big Data is not just a Machine Intelligence Problem"
+        "Need to understand and augment human intelligence too"
+        "HTM is an exciting R&D project"
+        "Using Clojure's thinking and tools can change the game"
+        "I would love to interest Clojure's great community in HTM"))
+    (slide :title "Resources"
+      (ul
+        (li (util/url "http://numenta.org/"))
+        (li (util/url "http://inbits.com/"))
+        (li (util/url "http://github.com/fergalbyrne/clortex"))
+        (li (util/url "http://leanpub.com/realsmartmachines"))
+       ))
+
+    (slide :title "Thanks"
+      (fragment-list
+        "Jeff Hawkins, Matt, many friends @Numenta and NuPIC"
+       "Rich Hickey, Stuart and many more in the Clojure world"
+        "Alex Miller, Carin Meier for their friendly advice"
+
+))
+
+           ))

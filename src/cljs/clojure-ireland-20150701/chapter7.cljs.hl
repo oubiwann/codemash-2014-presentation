@@ -1,0 +1,40 @@
+(ns clojure-ireland-20150701.chapter7
+  (:require [hoplon.reveal :refer [chapter slide notes bullet fragment-list annotation]]
+              [hoplon.util :as util]))
+
+
+(defn slides []
+  (chapter :title "and finally..."
+    (slide :title "resources"
+      (ul
+        (li (util/url "http://numenta.org/"))
+        (li (util/url "http://inbits.com/"))
+        (li (util/url "http://github.com/nupic-community/comportex"))))
+
+    (slide :title "Thanks"
+      (fragment-list
+        "Jeff Hawkins, Matt, many friends @Numenta and NuPIC"
+       "Rich Hickey, Stuart and many more in the Clojure world"
+        "Alex Miller, Carin Meier for their friendly advice"
+
+))
+  (slide :title "Questions?"
+      (fragment-list
+    "@fergbyrne on Twitter, @fergalbyrne on Github"
+    "fergal@brenter.ie"
+    "http://inbits.com"
+    ))
+           (slide :title "felix andrews' comportex"
+
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/YzGYZ9pCiBQ?rel=0"
+                          :frameborder 0)
+                  )
+           (slide :title "marcus lewis' comportex notebook"
+
+                  (iframe :width 853 :height 480
+                          :src "https://www.youtube.com/embed/tPjNWEj_vHc?rel=0"
+                          :frameborder 0)
+                  )
+
+           ))

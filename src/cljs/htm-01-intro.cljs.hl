@@ -1,0 +1,30 @@
+(page "htm-01-intro.html"
+      (:require [hoplon.reveal :refer [slideshow]]
+                [htm-01-intro.ch1-intro :as ch1]
+                [htm-01-intro.intro :as intro]
+                [htm-01-intro.motivation :as motivation]
+                [htm-01-intro.demo :as demo]
+                [htm-01-intro.chapter2 :as ch2]
+                [htm-01-intro.chapter3 :as ch3]
+                [htm-01-intro.chapter4 :as ch4]
+                [htm-01-intro.chapter5 :as ch5]
+                [htm-01-intro.chapter6 :as ch6]
+                [htm-01-intro.chapter7 :as ch7]))
+
+
+(html
+  (head
+        (title "Introduction to Hierarchical Temporal Memory"))
+  (body
+    (slideshow :theme "sky"
+      (ch1/slides)
+               ;(intro/slides)
+               (motivation/slides)
+      (ch2/slides)
+      #_(ch3/slides)
+      #_(ch4/slides)
+      (ch5/slides)
+      (ch6/slides)
+      #_(ch7/slides)
+      #_(demo/slides)
+               )))
